@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 2</title>
+</head>
+<body>
+	<div style="align-content: center;">
+			<form action="/action_page.php" target="_self">
+				<label for="fname" style="font-size: 50px" type="number">Numbers:</label><br><br>
+				<input type="button" name="Click me" onclick="perfectNumber(6)" style="width: 200px; cursor: pointer; font-size: 30px; background: #bb2020"><br>
+				
+			</form>
+		</div>
+		<form> <label for="color">Favorite color?</label><br> <input name="color" id="color" list="colors"> </form> <datalist id="colors"> <option>Red</option> <option>Yellow</option> <option>Blue</option> <option>Green</option> <option>Orange</option> <option>Purple</option> <option>Black</option> <option>White</option> <option>Gray</option> </datalist>
+
+
+		<script type="text/javascript">
+			function perfectNumber(number)
+						{
+						var num = 0;
+						   for(var n=1;n<=number/2;n++)
+						     {
+						         if(number%n === 0)
+						          { name="Click me" 
+						            num += n;
+						          }
+						     }
+						   
+						     if(num === number && num !== 0)
+						        {
+						       alert("It is a perfect number.");
+						        } 
+						     else
+						        {
+						       alert("It is not a perfect number.");
+						        }   
+						 } 
+					//perfectNumber(6);//
+
+		</script>
+
+</body>
+</html>

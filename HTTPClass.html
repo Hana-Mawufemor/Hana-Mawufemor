@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTTPClass</title>
+	<script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+</head>
+<body>
+	<div>
+		<form method="post">
+			<label>Email Address</label><br>
+			<input type="email" name="email" placeholder="name@example.com" /><br><br>
+			<button onclick="sendMail()" value="send Mail" />Send email</button>
+		</form>
+	</div>
+
+	
+	<script type="text/javascript">
+		let form = document.querySelector("form");
+
+		function sendMail() {
+		Email.send({
+			Host : "smtp.elasticemail.com",
+		    Username : "10086386@upsamail.edu.gh",
+		    Password : "",
+		    To : form.element[0].value,
+		    From : "10086386@upsamail.edu.gh",
+		    Subject : "programming",
+		    Body : "Hello Denise baby, I have missed you papa!!!!",
+		//}, function(response, error) {
+		//	if (response) {
+		//		console.log(response)
+		//	} else {
+		//		console.log(error)
+		//	}
+		})
+			.then(function (message) {
+			  alert("Your email has been succefully sent")
+			});
+		//	.then(
+		//	  message => alert("Your email has been succefully sent")
+		//	)
+		//.catch(
+		//	error => console.log(error)
+		//	);
+		}
+	</script>
+
+</body>
+</html>

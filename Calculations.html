@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculations</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		function regression() {
+			var n = prompt("enter the number of events");
+			var h = prompt("enter the sum of x");
+			var w = prompt("enter the sum of y");
+			var k = prompt("enter the square of x");
+			var p = prompt("enter the square of y");
+			var r = prompt("enter the multiplication of x and y");
+			var v = w * k;
+			var m = h * r;
+			var q = n * k;
+			var s = h * h;
+			var u = n * r;
+			var d = h * w;
+			var firstop = v - m;
+			var firstdown = q - s;
+			var a = firstop / firstdown;
+			var secondtop = u - d;
+			var secondown = q - s;
+			var b = secondtop / secondown;
+			document.write("y = " + a + " " + "+"  + " " + b + "x");
+		}
+		window.onload = regression();
+	</script>
+
+</body>
+</html>

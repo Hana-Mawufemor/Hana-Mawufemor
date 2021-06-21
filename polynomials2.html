@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Polynomials</title>
+</head>
+<body>
+	<div>
+		<p id="ans"></p>
+	</div>
+
+	<script type="text/javascript">
+		function polynomials() {
+			var a = prompt("Enter the first co-efficient");
+			var n = prompt("Enter the first exponent");
+			var b = prompt("Enter the second co-efficient");
+			var m = prompt("Enter the second exponent");
+			var c = prompt("Enter the third co-efficient");
+			var r = prompt("Enter the third exponent");
+			var z = parseInt(a) * parseInt(b) * parseFloat(c);
+			//var z = parseFloat(a) * parseFloat(b);
+			//var z = parseInt(a) * parseFloat(b);
+			var y = parseInt(n) + parseInt(m) + parseInt(r);
+			var c = z.toString();
+			var d = y.toString();
+			document.write(c + "X" + d.sup());
+		}
+		window.onload = polynomials();
+	</script>
+
+</body>
+</html>

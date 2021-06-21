@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Integrations</title>
+</head> 
+<body>
+	<button onclick="integral()" type="button">Click me</button>
+	<script type="text/javascript">
+		function integral() {
+			var xa = prompt("Enter first position");
+			var xb = prompt("Enter second position");
+			var a = prompt("Enter the first quadratic variable");
+			var b = prompt("Enter the second quadratic variable");
+			var c = prompt("Enter quadratic constant");
+			var h = prompt("Enter height");
+			var result = 0;t 8 
+			var exponential;
+			var constant;
+			var quadrant;
+			var breath = xb - xa;
+			var curve = breath / h;
+			for (var i = 0; i < h; i++) {
+				var exponential = xa + curve
+				quadrant = (a * Math.pow(exponential, 2)) + (b * exponential) + c 
+				constant = curve + quadrant;
+				result += constant;
+			}
+			//alert(result);
+	
+		}
+		window.alert(result);
+		//window.onload = integral();
+	</script>
+
+</body>
+</html>

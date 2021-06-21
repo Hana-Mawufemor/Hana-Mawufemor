@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Phi</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let n00 = prompt("where there is no squirrel or peanut") ;
+		let n01 = prompt("where there is no squirrel but a peanut");
+		let n10 = prompt("where there is a squirrel but no peanut");
+		let n11 = prompt("where there is a squirrel and peanut");
+		var ns1 = parseInt(n10) + parseInt(n11);
+		var ns0 = parseInt(n00) + parseInt(n01);
+		var np1 = parseInt(n01) + parseInt(n11);
+		var np0 = parseInt(n00) + parseInt(n10);
+		var i = n11 * n00;
+		var j = n10 * n01;
+		var x = i - j;
+		var m = ns1 * ns0 * np1 * np0;
+		var y = Math.sqrt(m);
+		//var y = m ^ 0.5;
+		var phi = x/y;
+		alert(phi);
+
+		window.onload 
+
+	</script>
+
+</body>
+</html>

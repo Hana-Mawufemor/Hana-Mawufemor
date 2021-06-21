@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Polynomials Q.22-36</title>
+</head>
+<body>
+	<div>
+		<p id="ans"></p>
+	</div>
+
+	<script type="text/javascript">
+		function polynomials() {
+			var a = prompt("Enter the first co-efficient");
+			var n = prompt("Enter the first exponent");
+			var b = prompt("Enter the second co-efficient");
+			var m = prompt("Enter the second exponent");
+			//var z = parseInt(a) * parseInt(b);
+			//var z = parseFloat(a) * parseFloat(b);
+			var z = parseInt(a) * parseFloat(b);
+			var y = parseInt(n) + parseInt(m);
+			var c = z.toString();
+			var d = y.toString();
+			document.write(c + "X" + d.sup());
+		}
+		window.onload = polynomials();
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Explore my world</title>
+</head>
+<body>
+	<div>
+		<h1 style="text-align: center; font-size:50px; font-style: italic;">Welcome to a world of many possibilities</h1>
+		<h2 style="font-size: 45">Lets play a game of "Click me"</h2>
+
+		<form> <label for="color" style="font-size: 20px">What is your favorite color?</label><br> <input name="color" id="color" list="colors"> </form> 
+
+		<datalist id="colors"> <option>Red</option> <option>Yellow</option> <option>Blue</option> <option>Green</option> <option>Orange</option> <option>Purple</option> <option>Black</option> <option>White</option> <option>Gray</option> <option>other</option> </datalist>
+
+		<p style="font-size: 20px;">Lets start by picking a color for the page background with your favorite color
+		<button onclick="changeBgColor()" style="height: 30px; width: 120px; cursor: pointer; font-size: 15px; align-content: center;">Click me</button></p>
+	</div>
+		<p style="font-size: 20px">
+			 Find the equation of the regression line for the data; Σx = 153.8, Σy = 18.7, Σxy = 682.77, Σx2 = 5859.26, Σy2 = 80.67, n = 6.
+			 <button onclick="regression()" style="height: 30px; width: 120px; cursor: pointer; font-size: 15px; align-content: center;">Click me</button>
+			 <p id="answer" style="font-size: 20px"></p>
+		</p>
+	<div>
+		<p style="font-size: 20px">Now lets see those who really attended Sunday school. What is the name of the first man in the bible? Click the button, the page will prompt you for the answer.
+			<button onclick="guess()" style="height: 30px; width: 120px; cursor: pointer; font-size: 15px; align-content: center;">Click me</button> <p id="guess" style="font-size: 20px"></p></p>
+	</div>
+	<script type="text/javascript">
+		function changeBgColor() {
+			document.body.style.backgroundColor = document.getElementById("color").value;
+
+		}
+		function regression() {
+			var n = prompt("enter n");
+			var h = prompt("enter Σx");
+			var w = prompt("enter Σy");
+			var k = prompt("enter Σx2");
+			var p = prompt("enter Σy2");
+			var r = prompt("enter Σxy");
+			var v = w * k;
+			var m = h * r;
+			var q = n * k;
+			var s = h * h;
+			var u = n * r;
+			var d = h * w;
+			var firstop = v - m;
+			var firstdown = q - s;
+			var a = firstop / firstdown;
+			var secondtop = u - d;
+			var secondown = q - s;
+			var b = secondtop / secondown;
+			var num = ("The answer is" + " " +"y = " + a + " " + "+"  + " " + b + "x");
+			document.getElementById("answer").innerHTML= num; 
+		}
+		function guess(){
+			var num = prompt("Enter the answer");
+			var ans = "Adam";
+			chances = 1;
+			for (var i = 0; i <= chances ; i++) {
+				var life = chances--
+				if (ans == num)  {
+					document.getElementById("guess").innerHTML = ("Your answer is right, you really did attend Sunday school");
+					break;
+				}
+				else {
+					document.getElementById("guess").innerHTML = ("Sorry but I am really disappointed in you." + " " + num + " " + "is incorrect, the correct answer is" + " " + ans);
+					break;
+				}
+			}
+		}
+ 
+	</script>
+
+
+</body>
+</html>

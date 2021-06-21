@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript Functions</title>
+	</head>
+	<body>
+
+		<h1 id="date" style="font-size: 54px"></h1>
+
+		<button onclick="showDate()" style="height: 100px; width: 200px; cursor: pointer; font-size: 24px; background: #b40000;">Run Date</button>
+
+		<br>
+
+		<button onclick="alertMe()" style="height: 100px; width: 200px; cursor: pointer; font-size: 24px; background: #b40000; align-content: center;">Run Function</button>
+
+		<br>
+
+		<button onclick="perfectNum()" style="height: 100px; width: 200px; cursor: pointer; font-size: 24px; background: #b40000;">Run num</button>
+
+
+		 <br>
+
+		<div style="align-content: center;">
+			<label id="minutes">00</label>
+			<label id="colon">:</label>
+			<label id="seconds">00</label>
+			<button onclick="startTimer()" style="height: 100px; width: 200px; cursor: pointer; font-size: 24px; background: #b40000;">Run Timer</button>
+
+		</div>
+
+		<div>
+			<form>
+				<label for="fname">Numbers:</label><br>
+				<input type="button" value="click me" onclick="perfectNumber(6)"><br>
+				
+			</form>
+		</div>
+		
+
+		<script type="text/javascript">
+			function alertMe() {
+				alert("Mouse Clicked");
+			}
+
+			function showDate() {
+				var currentDate = new Date.now();
+
+				document.getElementById("date").innerHTML=currentDate.toString()
+			}
+
+			function startTimer() {
+				var minutesLabel = document.getElementById("minutes")
+				var secondsLabel = document.getElementById("seconds");
+				var totalSeconds = 0;
+				setInterval(setTime, 1000);
+
+				function setTime() {
+					++totalSeconds
+					secondsLabel.innerHTML = pad(totalSeconds%60);
+					minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+				}
+
+				function pad(val) {
+					var valString = val + "";
+					if (valString.length < 2) {
+						return "0" + valString;
+					} else {
+						return valString					}
+				}
+			}
+
+			function perfectNum() {
+				var num = 6;
+				var x = 1;
+				var y = 2;
+				var z = 3;
+				var rnum = x + y + z; 
+				return(rnum)
+			}
+
+			function perfectNumber(number)
+						{
+						var num = 0;
+						   for(var n=1;n<=number/2;n++)
+						     {
+						         if(number%n === 0)
+						          {
+						            num += n;
+						          }
+						     }
+						   
+						     if(num === number && num !== 0)
+						        {
+						       console.log("It is a perfect number.");
+						        } 
+						     else
+						        {
+						       console.log("It is not a perfect number.");
+						        }   
+						 } 
+						//perfectNumber(6);//
+
+
+		</script>
+	</body>
+</html>
